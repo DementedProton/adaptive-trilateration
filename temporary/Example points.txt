@@ -1,0 +1,7 @@
+7,0 point in Sukanth's experiment rgb only - is good for overestimation
+4,4 in our method RGB - is good for overestimation
+3,0 in our method RGB - same as above. Check if mods to remove increment can be done 
+image example for points in border of circle.
+ask sid to do these images with circles - 
+Pie chart for % of points for 3 cases for underestimation
+Pie chart for points near border in general three cases 

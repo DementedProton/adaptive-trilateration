@@ -1,0 +1,46 @@
+Algorithm  (Assumption is values have been taken for necessary points)
+
+Convert the RSSI into distance using the log distance formula.
+Use the best three routers based on distance(smallest is best).
+
+They don't touch case:
+
+Increment them to meet.
+Rb- bigger circle
+Rm- middle circle
+Rs- smallest circle
+Dab - Distance between routers a and b.
+W[i][j] - Weight of pixel
+W1[i][j],W2[i][j] are the weights of the two bands that intersect.
+
+Increment Steps
+if Rb + Rm < Dbm or Rb + Rs <Dbs, increase Rb by 10% of its initial value.
+if Rm + Rb < Dmb or Rm + Rs <Dms, increase Rm by 10% of its initial value.
+if Rs + Rb < Dsb or Rs + Rm <Dsm, increase Rs by 10% of its initial value.
+
+if Rb > Rm + Dbm or Rb > Rs + Dbs decrease Rb by 10% of its initial value.
+if Rm > Rb + Dbm or Rm > Rs + Dms decrease Rb by 10% of its initial value.
+if Rs > Rb + Dbs or Rs > Rm + Dms decrease Rb by 10% of its initial value.
+
+Repeat till all circles touch each other.
+
+
+Algorithm for location estimation
+
+find ratio Rr of Rs and Rm (Rs/Rm): r is the radius of circle in question.
+Divide each circle into bands of r/3, 2r/3 and r
+In each circle allot weights according to the bands.
+The 3rd band gets 2/r weight.
+The 2nd band gets 3/2r weight.
+The 1st band gets 1/2r weight.
+
+If ratio Rr > 0.55
+W[i][j] = W1[i][j] + W2[i][j]
+
+If ratio Rr < 0.55
+W[i][j] = W1[i][j] - W2[i][j](Still you would get a positive value).
+
+where W[i][j] = maximum is target area.
+Avgi and Avgj becomes the point estimation.
+
+

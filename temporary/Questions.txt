@@ -1,0 +1,14 @@
+Reviewer #1: This paper propose a location technique with a minimal ingrastructure overhead and calibration. Most of RSS-based location techniques depen upon fingerprint maps, but generating a fingerprint is tedious. Some authors proposes multilateration based on a geometric approach, the intersection of k-spheres. Quality of most of approaches based on trilateration are poor. Low accuracy in circles, intersection between circles is not constant in many cases, etc. This paper presents a novel weighted adaptive location estimation algorithm that is a non-fingerprinting based approach for RSS-based Wi-Fi localization, which takes into account both overestimation and underestimation errors and does an appropriate distance re-estimation such that the quality of trilateration. Because of prone to errors in accuracy of trilateration authors propose an algorithm that pretends improving the accuracy of localization over basir trilateration. They carry out basic trilateration taking
+into account the quality and properties of the circle overlaping in the trilateration region.
+
+I found very original and interesting the assignation of different weights to points inside the circle, these weights correlate to the likely probability of the point lying in the estimated location. I think that the elimination of any shadowing due to obstacles with placing routers placed at a height of 2.43m aiding in maintaining a line of sight with minimum path loss at each point is really daring and innovative point. I agree that the accuracy can be improved since the identificatio errors is difficult because it is prone to environmental factors such as the humidity, temperature, and dynamically moving obstacles, but this work establishes a good basis to work on. This work includes a deep analysis of the efficacy of the algorithm comparing it with other non-fingerprinting approaches.  Authors provide results of experiments over real indoor test-beds that show the improvements in accuracy of the algorithm with real experiments and statistics data. 
+
+I recommend this paper for publication in the journal but I recommend to avoid repetitive "we wil describe.... " since makes it difficult to follow in some points the scientific approach. Although the paper is well written this is a tip for authors.
+
+Review 2:
+
+This work proposes an algorithm that improves the accuracy of localization over the basic trilateration by taking into account the quality and properties of the circle overlaps in the trilateration region.
+The paper porposes an interesting topic, and the research design is appropiated. The results are clearly presented and the conclusions are supported by the results, but it will need some revisions before it can be considered again.
+1.‐ The english language and style are fine/minor spell check is required. 
+2.‐ The introduction need to provide more relevant references.
+3. The paper could be better structured and the methods better described.
